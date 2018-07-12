@@ -17,11 +17,13 @@ myCar.honk()
 myCar.crash()
 myCar.openDoors()
 
+let newCar = shelby(make: "ford", model: "comairo", speed: 0, numDoors: 2, seating: 4, horsepower: 800, engineSize: "v12", color: "chrome red", hasGas: true, tintedWindows: true, spoiler: true, isOn: false, camera: true)
 
+print(newCar.camera)
 
-
-
-
+newCar.camOn()
+newCar.crash()
+newCar.honk()
 
 
 
