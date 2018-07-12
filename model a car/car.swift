@@ -11,8 +11,8 @@ import Foundation
 class Car {
     var make:String
     var model:String
-    var speed:Int
-    var numDoors:Int
+    var speed: Int = 0
+    var numDoors: Int
     var seating:Int
     var horsepower:Int
     var engineSize:String
@@ -20,7 +20,7 @@ class Car {
     var hasGas:Bool
     var tintedWindows:Bool
     var spoiler:Bool
-    var isOn:Bool
+    var isOn:Bool=false
     init(make: String, model: String, speed: Int, numDoors: Int, seating: Int, horsepower: Int, engineSize: String, color: String, hasGas: Bool, tintedWindows: Bool, spoiler: Bool, isOn:Bool ) {
     self.make = make
     self.model = model
@@ -35,4 +35,39 @@ class Car {
     self.spoiler = spoiler
     self.isOn = isOn
    }
+    
+    func turnOnOrOff() {
+        if isOn {
+            isOn = false
+        } else {
+            isOn = true
+        }
+    }
+    
+    func accelerate() {
+        speed += 5
+        print("this car is currently going \(speed) MPH.")
+    }
+    
+    func decelerate() {
+        if speed>0 {
+            speed -= 5
+        }
+        print("this car is currently  going \(speed) MPH.")
+    }
+    
+    func crash() {
+        print("booooooooooom")
+    }
+
+    func honk() {
+        print("hoooonk")
+    }
+
+    func openDoors(){
+        for doorNumber in 1...numDoors {
+            print("opening door \(doorNumber).")
+        }
+    }
 }
+

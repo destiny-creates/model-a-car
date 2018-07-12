@@ -8,11 +8,14 @@
 
 import Foundation
 
+let myCar = Car(make: "ford", model: "shelby cobra", speed: 0, numDoors: 2, seating: 4, horsepower: 2000, engineSize: "v12", color: "blue", hasGas: true, tintedWindows: true, spoiler: true, isOn: true)
 
-
-
-
-
+for _ in 1...10 {
+    myCar.accelerate()
+}
+myCar.honk()
+myCar.crash()
+myCar.openDoors()
 
 
 
